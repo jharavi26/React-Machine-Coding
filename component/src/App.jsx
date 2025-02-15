@@ -1,5 +1,6 @@
 import './App.css'
-import Toast from './components/06.Toast/Toast'
+import Converter from './components/07.Crypto/Converter'
+
 
 
 
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <>
-    <Toast />
+    <Converter />
        
     </>
   )
