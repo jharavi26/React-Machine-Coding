@@ -1,15 +1,13 @@
 import './App.css'
-import Converter from './components/07.Crypto/Converter'
-
-
-
+import Modal from './components/07.Modal/Modal'
 
 function App() {
  
 
   return (
     <>
-    <Converter />
+    <Modal />
+   
        
     </>
   )
