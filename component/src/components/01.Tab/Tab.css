@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 10px;
+}
+
+button{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
