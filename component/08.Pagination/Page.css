@@ -18,8 +18,28 @@
 }
 
 img{
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   border: 2px solid black;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 15px;
+}
+
+.pagination > span{
+  padding: 15px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.pagination_disable{
+  opacity: 0;
+}
+
+.pagination_selected{
+  background-color: grey;
+}
