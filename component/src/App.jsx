@@ -1,12 +1,14 @@
+import Page from '../08.Pagination/Page'
 import './App.css'
-import Modal from './components/07.Modal/Modal'
+
 
 function App() {
  
 
   return (
     <>
-    <Modal />
+    <Page />
+  
    
        
     </>

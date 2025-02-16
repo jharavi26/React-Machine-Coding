@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.product{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin : 5px;
+}
+
+.product_single {
+  display: flex;
+  flex-direction: column; /* Ensures text comes below the image */
+  align-items: center; /* Centers text horizontally */
+}
+
+img{
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+}
+
