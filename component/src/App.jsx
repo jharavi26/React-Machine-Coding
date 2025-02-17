@@ -1,5 +1,6 @@
-import Page from '../08.Pagination/Page'
+
 import './App.css'
+import Image from './components/09.Carousel/Image'
 
 
 function App() {
@@ -7,10 +8,8 @@ function App() {
 
   return (
     <>
-    <Page />
-  
+    <Image />
    
-       
     </>
   )
 }
