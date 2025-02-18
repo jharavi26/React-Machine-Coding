@@ -1,6 +1,8 @@
 
-import './App.css'
-import Image from './components/09.Carousel/Image'
+import './App.css';
+import Progress from './components/11.progress/Progress';
+
+
 
 
 function App() {
@@ -8,7 +10,9 @@ function App() {
 
   return (
     <>
-    <Image />
+    <Progress />
+  
+   
    
     </>
   )
