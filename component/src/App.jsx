@@ -1,6 +1,6 @@
 
 import './App.css';
-import Search from './components/12.search/Search';
+import Card from './components/13.card/Card';
 
 
 
@@ -9,12 +9,11 @@ function App() {
  
 
   return (
+
     <>
-    <Search />
-  
-  
-   
-   
+    <div className='app'>
+    <Card />
+    </div>
     </>
   )
 }
