@@ -1,6 +1,6 @@
 
 import './App.css';
-import Progress from './components/11.progress/Progress';
+import Search from './components/12.search/Search';
 
 
 
@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-    <Progress />
+    <Search />
+  
   
    
    
