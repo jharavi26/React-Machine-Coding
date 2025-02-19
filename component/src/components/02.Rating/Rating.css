@@ -1,0 +1,22 @@
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+.star-rating .active svg{
+  stroke: red;
+  fill: yellow;
+}
+
+.star-rating .hover svg{
+  stroke: rgb(106, 0, 255);
+  fill: rgb(4, 255, 0);
+}
+
+.star-rating .hover.active svg{
+  stroke: blanchedalmond;
+  fill: peru;
+}
