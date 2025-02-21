@@ -1,6 +1,7 @@
 
 import './App.css';
-import Rating from './components/02.Rating/Rating';
+import Card from './components/13.card/Card';
+
 
 
 
@@ -14,7 +15,8 @@ function App() {
 
     <>
     <div className='app'>
-      <Rating value={0} />
+      <Card />
+     
 
     </div>
     </>
