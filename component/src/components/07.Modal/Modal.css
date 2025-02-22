@@ -1,8 +1,24 @@
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
 .container{
-  position: fixed;
-  border: 1px solid black;
-  padding: 1rem;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  position : relative;
+ 
+}
+
+.close{
+  position: absolute;
+  right: 1px;
+  top: 0;
+  font-size: 20px;
 }

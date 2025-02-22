@@ -1,6 +1,5 @@
-
-import Infinite from './15.Infinite_Scroll/Infinite';
 import './App.css';
+import Modal from './components/07.Modal/Modal';
 
 function App() {
 
@@ -8,7 +7,8 @@ function App() {
 
     <>
     <div className='app'>
-      <Infinite /> 
+      <Modal />
+  
 
     </div>
     </>
