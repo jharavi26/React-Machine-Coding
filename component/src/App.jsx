@@ -1,5 +1,6 @@
 import './App.css';
-import Modal from './components/07.Modal/Modal';
+import Drag from './components/16.Drag_Drop/Drag';
+
 
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
 
     <>
     <div className='app'>
-      <Modal />
+      <Drag />
+
   
 
     </div>

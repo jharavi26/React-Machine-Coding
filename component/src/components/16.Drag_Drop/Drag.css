@@ -1,0 +1,26 @@
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.header{
+  width: 250px;
+  min-height: 300px;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: large;
+
+}
+
+.content{
+  user-select: none;
+  padding: 16px;
+  margin: 0 0 8px 0;
+  background-color: rgb(14, 131, 160);
+  cursor: move;
+  border: 1 px solid black;
+  font-weight: 100;
+  font-size: medium;
+
+}
