@@ -24,7 +24,6 @@ const List = () => {
 
   }
 
-
   return (
     <div className='container'  onScroll={handleScroll} style = {{height : Height, width : Width, backgroundColor:"aqua", overflow:"auto"}} >
       <div className='wrapper' style={{height : Item.length*itemHeight , position:"relative" , backgroundColor : "green"}}>

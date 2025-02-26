@@ -1,5 +1,5 @@
 import './App.css';
-import List from './components/20.VList/list';
+import Multi from './components/22.MultiSelect/Multi';
 
 
 
@@ -10,7 +10,9 @@ function App() {
 
     <>
     <div className='app'>
-    <List/>
+      <Multi/>
+
+
 
 
     </div>
