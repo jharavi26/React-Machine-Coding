@@ -52,6 +52,8 @@ function Image() {
 
   },[store])
 
+
+
   const handleImageLoad = (event) => {
     event.target.classList.add("loaded");
   };
@@ -62,7 +64,7 @@ function Image() {
         store.length> 0 && <div className='wrapper'>
           {
             store.map((item, index)=>{
-              return <span key={item.id} onClick={()=>handleClick(index)} >
+              return <span key={item.id} >
                 <img src={item.download_url} alt = {item.author} className='images' loading='lazy'  onLoad={handleImageLoad} />
               </span>
             })
