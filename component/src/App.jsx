@@ -1,5 +1,6 @@
 import './App.css';
-import Drop from './components/18.Autoselect/Drop';
+import Image from './components/19.Gallary/Image';
+
 
 
 function App() {
@@ -8,10 +9,8 @@ function App() {
 
     <>
     <div className='app'>
-      <Drop />
+      <Image/>
 
-
-  
 
     </div>
     </>

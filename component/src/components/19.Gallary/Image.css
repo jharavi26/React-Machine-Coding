@@ -1,0 +1,27 @@
+.wrapper{
+  margin: 10px;
+  position: relative;
+  
+}
+
+.images{
+  height: 160px;
+  width: 190px;
+  margin: 12px;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.images[loading="lazy"] {
+  opacity: 0;
+}
+
+.images[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+
+
+
+
