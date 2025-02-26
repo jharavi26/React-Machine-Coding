@@ -1,5 +1,6 @@
 import './App.css';
-import Image from './components/19.Gallary/Image';
+import List from './components/20.VList/list';
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
     <>
     <div className='app'>
-      <Image/>
+    <List/>
 
 
     </div>
