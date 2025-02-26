@@ -13,7 +13,7 @@ const Search = () => {
     fetchData(value);
   }
 
-  const fetchData = async(value)=>{
+    const fetchData = async(value)=>{
     const response = await fetch("https://dummyjson.com/users?limit=100");
     const data = await response.json();
     const result = data.users.filter((user)=>{
@@ -21,8 +21,7 @@ const Search = () => {
         value && user && user.firstName && user.firstName.toLowerCase().includes(value)
       )
     })
-    setResult(result);
-    
+    setResult(result);  
   }
 
   return (

@@ -1,6 +1,5 @@
 import './App.css';
-import Grid from './components/16.Drag_Drop/17.Grid_Light/Grid';
-import Drag from './components/16.Drag_Drop/Drag';
+import Drop from './components/18.Autoselect/Drop';
 
 
 function App() {
@@ -9,7 +8,8 @@ function App() {
 
     <>
     <div className='app'>
-    <Grid />
+      <Drop />
+
 
   
 
