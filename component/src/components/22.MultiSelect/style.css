@@ -32,7 +32,8 @@
   margin: 0;
   position: absolute;
   background-color: #fff;
-  border: 1px sold #ccc;
+  border: 1px solid #ccc;
+  margin-top: 20px;
 }
 
 .suggestion-list li{
@@ -55,4 +56,29 @@
 .suggestion-list li img
 {
   height: 20px;
+}
+
+.user-pill {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: black;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-pill img {
+  height: 16px; /* Set a fixed height */
+  width: 16px;  /* Optional: Set width to maintain aspect ratio */
+  border-radius: 50%; /* Optional: Makes it round */
+  object-fit: cover; /* Ensures image doesn't stretch */
+}
+
+
+.suggestions-list li.active {
+  background-color: #ccc;
 }
