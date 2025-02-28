@@ -1,0 +1,18 @@
+h1{
+  text-align: center;
+}
+
+.wrapper{
+  border: 2px solid black;
+  position: relative;
+  margin: 0.5rem , 0;
+  padding: 0.5rem;
+}
+
+.plus{
+  font-size: 24px;
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  
+}

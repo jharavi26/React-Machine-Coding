@@ -9,8 +9,6 @@ function Multi() {
 
   const inputRef  = useRef(null);
 
-
-
   useEffect(()=>{
     const fetchData = async ()=>{
       try{
