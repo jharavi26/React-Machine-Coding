@@ -1,66 +1,67 @@
-import React, { useEffect, useRef, useState } from 'react';
-import "./Modal.css"
+import React, { useState, useEffect, useRef } from "react";
+import "./App.css";
 
-function Modal() {
-  const [showDialog , setShowDialog] = useState(false);
-  const contentRef = useRef();
-  const backDropRef = useRef();
+function App() {
+  const [showDialog, setShowDialog] = useState(false);
+  const modalRef = useRef(null);
 
+  const handleClick = () => {
+    setShowDialog(true);
+  };
 
-  const handleShow = ()=>{
-    setShowDialog(true)
-  } 
+  const handleClose = () => {
+    setShowDialog(false);
+  };
 
-  const handleCloseDialog = ()=>{
-    setShowDialog(false)
-  }
-
-  function handleClose() {
-    backDropRef.current.classList.add("hide");
-    contentRef.current.classList.add("hide");
   
-    contentRef.current.addEventListener("animationend", handleAnimationEnd, {
-      once: true,
-    });
-  }
-
-  useEffect(()=>{
- 
-    document.addEventListener("keyup" , handleKeyUp);
-
-    return ()=> document.removeEventListener("keyup" , handleKeyUp)
-  },[])
-
-
-  function handleAnimationEnd(){
-    handleCloseDialog();
-   }
-
-  function handleKeyUp(e){
-    if(e.key === "Backspace"){
-      handleClose();
+  const closeDialog = () => {
+    if (modalRef.current ) {
+      modalRef.current.classList.add("hide");
+      modalRef.current.addEventListener("animationend", handleAnimationEnd, {
+        once: true,
+      });
     }
-  }
-  
+  };
 
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "Backspace") {
+        closeDialog();
+      }
+    };
+
+    document.addEventListener("keyup", handleKey);
+
+    return () => {
+      document.removeEventListener("keyup", handleKey);
+    };
+  }, [closeDialog]);
+
+  const handleAnimationEnd = () => {
+    handleClose();
+  };
 
   return (
-    <div className='app'>
-      <div>
-      <button onClick={handleShow}>Show</button>
-      {showDialog &&  
-      <>
-      <div className='backdrop' ref={backDropRef} onClick={handleClose}/>
-      <div className='container' ref={contentRef}>
-        <p>A modal container is a user interface element that displays content in an overlay, typically appearing on top of the main page. It is commonly used for pop-ups, forms, alerts, or additional information without navigating away from the current view. A modal enhances user experience by focusing attention on specific tasks while keeping the background content accessible but inactive.
-          <button className='close' onClick={handleClose}>&times;</button>
-        </p>
+    <div className="wrapper">
+      <button className="show-modal" onClick={handleClick}>
+        Show Modal
+      </button>
+      {showDialog && (
+        <div className="container">
+          <div className="modal" ref={modalRef}>
+            <p>
+              This is Modal Text. The entity inside the element represents the
+              multiplication symbol, commonly used as a close button in UI
+              design.
+            </p>
+            <button className="close-btn" onClick={closeDialog}>
+              &times;
+            </button>
+          </div>
         </div>
-        </>
-        }
-      </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Modal
+export default App;
