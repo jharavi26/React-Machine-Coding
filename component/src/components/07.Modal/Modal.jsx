@@ -31,7 +31,6 @@ function Modal() {
     return ()=> document.removeEventListener("keyup" , handleKeyUp)
   },[])
 
-
   function handleAnimationEnd(){
     handleCloseDialog();
    }

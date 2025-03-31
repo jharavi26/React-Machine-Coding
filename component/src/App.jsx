@@ -1,6 +1,6 @@
 import './App.css';
-import Accordian from './components/10.Accordian/Accordian';
-import Multi from './components/22.MultiSelect/Multi';
+import Rating from './components/02.Rating/Rating';
+
 
 
 
@@ -11,8 +11,8 @@ function App() {
 
     <>
     <div className='app'>
-      <Accordian />
-
+      <Rating/>
+   
 
 
 
