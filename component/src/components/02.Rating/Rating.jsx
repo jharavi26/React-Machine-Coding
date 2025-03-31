@@ -11,7 +11,7 @@ function App() {
     setClickIndex(id);
   }
 
-  const handleMouseEnter = (index) => {
+  const handleMouseEnter = (index) => {          //write way to do
     setHoverIndex(index);
   }
     
