@@ -22,7 +22,6 @@ function OTP() {
    if(newValue && index < DIGIT-1 && inputRef.current[index]){
     inputRef.current[index+1].focus();
    }
-   
   }
 
   const handleKeyDown = (e, index)=>{

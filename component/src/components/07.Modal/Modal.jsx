@@ -1,89 +1,55 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./App.css";
+import React, { useRef, useState , useEffect } from 'react';
+import "./Modal.css";
 
-function App() {
-  const [showDialog, setShowDialog] = useState(false);
-  const modalRef = useRef(null);
+function Modal() {
+  const [showModal, setShowModal] = useState(false);
+  const modalRef = useRef();
 
-  const handleClick = () => {
-    setShowDialog(true);
-  };
-
-  const handleClose = () => {
-    setShowDialog(false);
-  };
-
-  
-<<<<<<< HEAD
-    contentRef.current.addEventListener("animationend", handleAnimationEnd, {
-      once: true,
-    });
+  const handleToggle = ()=>{
+    setShowModal(!showModal)
   }
 
-  useEffect(()=>{
- 
-    document.addEventListener("keyup" , handleKeyUp);
-
-    return ()=> document.removeEventListener("keyup" , handleKeyUp)
-  },[])
-
-  function handleAnimationEnd(){
-    handleCloseDialog();
-   }
-
-  function handleKeyUp(e){
-    if(e.key === "Backspace"){
-      handleClose();
-=======
-  const closeDialog = () => {
-    if (modalRef.current ) {
-      modalRef.current.classList.add("hide");
-      modalRef.current.addEventListener("animationend", handleAnimationEnd, {
-        once: true,
-      });
->>>>>>> 2edd5de21e264e7670bb233ba9597c895d6737a6
-    }
-  };
+  const handleClose = ()=>{
+    setShowModal(false);
+  }
 
   useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === "Backspace") {
-        closeDialog();
+    const handleOutsideClick = (e) => {
+      if (!modalRef.current?.contains(e.target)) {
+        setShowModal(false);
       }
     };
-
-    document.addEventListener("keyup", handleKey);
-
-    return () => {
-      document.removeEventListener("keyup", handleKey);
+  
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        setShowModal(false);
+      }
     };
-  }, [closeDialog]);
-
-  const handleAnimationEnd = () => {
-    handleClose();
-  };
-
+  
+    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener("keydown", handleEsc);
+  
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+  
   return (
-    <div className="wrapper">
-      <button className="show-modal" onClick={handleClick}>
-        Show Modal
-      </button>
-      {showDialog && (
-        <div className="container">
-          <div className="modal" ref={modalRef}>
-            <p>
-              This is Modal Text. The entity inside the element represents the
-              multiplication symbol, commonly used as a close button in UI
-              design.
-            </p>
-            <button className="close-btn" onClick={closeDialog}>
-              &times;
-            </button>
-          </div>
-        </div>
-      )}
+
+    <div className='container'>
+      <button onClick={(e)=>{e.stopPropagation(); handleToggle()}}>{showModal ? "Hide" : "Show"} </button>
+
+      {showModal && <div className='modal' ref={modalRef}>
+        <p>These JavaScript concepts are essential for a 5-6 LPA frontend developer job because they enable you to build efficient, dynamic, and maintainable applications. In addition, interviewers often test your understanding of these concepts to assess how you handle complex programming tasks and problem-solving challenges.
+          <span onClick={handleClose}>Close</span>
+        </p>
+
+        </div>}
+   
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default Modal

@@ -1,5 +1,6 @@
 import './App.css';
 import Rating from './components/02.Rating/Rating';
+import Modal from './components/07.Modal/Modal';
 
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
 
     <>
     <div className='app'>
-    <Rating/>
+      <Modal/>
+
    
 
 

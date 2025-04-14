@@ -1,74 +1,30 @@
-.wrapper{
-  height : 100vh;
+.container {
+  height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: tomato;
-  animation: showDialog 0.3s linear forwards;
-  
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  width: auto;
-  background-color: rgb(91, 171, 171);
-
-}
-
-.show-modal {
-  position: static; /* ✅ Remove absolute positioning */
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-
-}
-
-.modal{
-  height: 200px;
-  width: 200px;
-  border: 2px solid black;
-  background-color: green;
-  position: relative;
-  padding-top: 2rem;
-  animation: showDialog 0.3s linear forwards;
-}
-
-.close-btn{
+button {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  border: none;
-  outline: none;
-  background-color: transparent;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 16px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.modal span {
+  position: absolute;
+  border: 1px solid black;
+  right: 0.7rem;
+  bottom: 0.3rem;
   cursor: pointer;
-  font-size: 1.4rem;
-
-}
-
-.hide{
-  animation : hideDialog 0.3s linear forwards !important;
-}
-
-@keyframes showDialog{
-  from {
-    opacity: 0;
-  }
-  to 
-  {
-    opacity: 1;
-  }
-}
-
-@keyframes hideDialog{
-  from {
-    opacity: 1;
-  }
-  to 
-  {
-    opacity: 0;
-  }
 }
